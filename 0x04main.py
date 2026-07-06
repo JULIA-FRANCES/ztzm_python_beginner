@@ -1,20 +1,19 @@
-# Exercise 5 Solution - Build a Simple Student Database
+# Exercise 1: Simple Student Database
 
-# Initial database setup with 3 students and their courses (stored as a list)
-student_db = {
-    "Alice": ["Calculus", "Data Science", "Chemistry"],
-    "Bob": ["Web Development", "Graphic Design", "Machine Language"],
-    "Charlie": ["Cybersecurity", "Networking", "Math"]
+students = {
+    "Alice": ["Math", "English", "Biology"],
+    "Bob": ["History", "Physics"],
+    "Charlie": ["Art", "Economics", "Math"]
 }
 
-# Task 1: Add a new course to an existing student 
-student_db["Alice"].append("Machine Learning")
+# Task 1: Add a new course to Alice
+students["Alice"].append("Computer Science")
 
-#  Task 2: Remove a course from another student 
-student_db["Bob"].remove("Graphic Design")
+# Task 2: Remove 'Art' from Charlie's courses
+students["Charlie"].remove("Art")
 
-#  Task 3: Print out all students and their courses nicely formatted 
-for name, courses in student_db.items():
+# Task 3: Print all student names and their courses
+for name, courses in students.items():
     print(f"Student: {name}")
     print("Courses:", ", ".join(courses))
     print("---")
